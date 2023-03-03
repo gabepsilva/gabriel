@@ -1,17 +1,21 @@
-# Gabriel P da Silva
-:material-city-variant: Toronto, ON, Canada
 
+
+# Résumé: Gabriel P da Silva 
+<img src="/images/index.png" align="left" width="100px"/>
+
+
+:material-city-variant: Toronto, ON, Canada  
 :simple-linkedin:{ .linkedin } linkedin.com/in/gabrielpe  
 :simple-github: github.com/gabepsilva  
 
+<br clear="left"/>
 
-As an experienced engineer, my strong track record includes platform engineering, support the adoption of DevOps culture, automating software delivery. In my most recent projects  I have been working with a variety of customers, big and small, to create highly available infrastructure, build CI/CD pipelines, implement configuration management systems, coaching the DevOps and GitOps adoption.
+Experienced DevOps consultant with a strong track record of implementing DevOps culture, platform engineering and assisting organizations with software delivery. Skilled in building highly available applications and infrastructure, creating CI/CD pipelines and implementing configuration management systems.
 
-I am also an active team leader with a positive attitude, client-focused, excellent ability to work in and with teams.
-
-
+Active team leader, client-focused, positive attitude, and excellent ability to work with teams.
+<!-- 
 Check [my projects page](cover "They are mostly dead projects"). They are mostly dead projects I did for fun, but it also shows some of my skills.
-
+ -->
 
 
 ## Top Skills
@@ -19,7 +23,9 @@ Check [my projects page](cover "They are mostly dead projects"). They are mostly
 - **Programming Proficiency**: Python, Java, TypeScript, Go, C/C++, Shell Script, Groovy
 - **Tool stack domain**: AWS, Docker, Git, Gradle, Maven, Kubernetes, PCF, NodeJS, Spring Framework, Angular, Jenkins, SQL and NoSQL databases, Terraform
 
+<!-- 
 These are the skills I use more frequently, but also as part of my self improvement plan [I have done a bunch of courses](cover "some are not that relevant, but are very cool").
+ -->
 
 ## Certifications 
 

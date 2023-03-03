@@ -9,11 +9,15 @@ copyright: Copyright &copy; 2016 - 2023 Gabriel da Silva
 
 nav:
   - Home: index.md
-  - Courses: courses.md
-  - Youtubers: youtubers.md
-
-  - Projects: projects.md
+  #- Courses: courses.md
+  #- Youtubers: youtubers.md
+  #- Projects: projects.md
   
+
+extra:
+  analytics:
+    provider: google
+    property: G-32G1TZW0ME
 
 theme:
   name: material

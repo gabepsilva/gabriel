@@ -1,3 +1,4 @@
+UDEMY
 [Data Visualization with Kibana]( https://www.udemy.com/course/data-visualization-with-kibana/ ){target=_blank}.  
 Visualize and analyze data with Kibana, part of the ELK stack (Elasticsearch, Logstash & Kibana) and Elastic Stack.
 
@@ -17,4 +18,27 @@ The Ultimate Comprehensive Course - Perfect for Both Beginners and Experienced D
 [Web Development w/ Google’s Go (golang) Programming Language]( https://www.udemy.com/course/go-programming-language/ ){target=_blank}.  
 Learn Web Programming from a University Professor in Computer Science with over 20 years of teaching experience.
 
+AWS TRAINING 
+https://www.aws.training/Details/InstructorLedTraining?id=106580
+8 SEPT
 
+https://www.aws.training/Details/InstructorLedTraining?id=104317
+25 AUG
+
+https://www.aws.training/Details/InstructorLedTraining?id=106348
+22 AUG
+
+https://www.aws.training/Details/InstructorLedTraining?id=106348
+18 AUG
+
+https://www.aws.training/Details/InstructorLedTraining?id=95922
+15 AUG
+
+
+
+
+SAFe
+https://support.scaledagile.com/s/article/Exam-Details-SDP?language=en_US
+
+AWS  workshops
+https://awsworkshop.io/
