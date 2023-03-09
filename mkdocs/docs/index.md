@@ -1,7 +1,7 @@
 
 
 # Résumé: Gabriel P da Silva 
-<img src="/images/index.png" align="left" width="100px"/>
+<img src="./images/index.png" align="left" width="100px"/>
 
 
 :material-city-variant: Toronto, ON, Canada  
