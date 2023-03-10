@@ -9,12 +9,8 @@ phases:
   install:
     on-failure: ABORT 
     commands:
-      - id
-      - env | sort
       - pip3 install mkdocs
       - pip install mkdocs-material
-
-
   #pre_build:
   #  run-as: Linux-user-name
   #  on-failure: ABORT | CONTINUE
@@ -54,7 +50,7 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: 'dist'
+  base-directory: 'mkdocs/site'
 #  name: artifact-name
 #  discard-paths: no | yes
 #  base-directory: location
