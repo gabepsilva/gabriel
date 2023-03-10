@@ -26,7 +26,6 @@ phases:
     commands:
       - cd mkdocs
       - mkdocs build
-      - ls -lhrt
    # finally:
    #   - command
    #   - command
