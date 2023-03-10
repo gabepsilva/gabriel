@@ -60,7 +60,7 @@ resource "aws_codebuild_project" "apply_terraform_project" {
 
   source {
     type            = "CODEPIPELINE"
-    buildspec       = "buildspec.yaml"
+    buildspec       = "buildspec.yml"
     git_clone_depth = 1
   }
 
