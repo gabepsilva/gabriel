@@ -8,8 +8,8 @@ env:
 phases:
   install:
     #run-as: ec2-user
-    on-failure: ABORT 
-    #commands:
+    #on-failure: ABORT 
+    commands:
       - env | sort
       - cat  /etc/passwd
       - pip install mkdocs
