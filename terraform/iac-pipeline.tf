@@ -64,11 +64,10 @@ resource "aws_codebuild_project" "apply_terraform_project" {
     git_clone_depth = 1
   }
 
-    artifacts {
+  artifacts {
     type = "CODEPIPELINE"
   }
 }
-
 
 
 #########################
@@ -199,6 +198,24 @@ resource "aws_codepipeline" "terraform_pipeline" {
             type  = "PLAINTEXT"
           }
         ])
+      }
+    }
+  }
+
+  stage {
+    name = "Deploy"
+
+    action {
+      name            = "DeployAction"
+      category        = "Deploy"
+      owner           = "AWS"
+      provider        = "S3"
+      version         = "1"
+      input_artifacts = ["BuildOutput"]
+      configuration = {
+        BucketName = aws_s3_bucket.resume_bucket.bucket
+        Extract    = true
+        ObjectKey  = "/"
       }
     }
   }

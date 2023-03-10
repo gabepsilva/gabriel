@@ -10,9 +10,10 @@
 
 <br clear="left"/>
 
-Experienced DevOps consultant with a strong track record of implementing DevOps culture, platform engineering and assisting organizations with software delivery. Skilled in building highly available applications and infrastructure, creating CI/CD pipelines and implementing configuration management systems.
+I am an experienced DevOps Architect with proficiency with cloud computing platforms such as AWS and GCP, containerization tools like Docker and Kubernetes, version control strategies, build tools like Gradle, Maven and Make, and infrastructure-as-code tools like Terraform and Ansible. I have a comprehensive experience supporting companies to adopt the Culture, Processes, and Tools of Devops.
 
-Active team leader, client-focused, positive attitude, and excellent ability to work with teams.
+I have successfully led and implemented DevOps workstreams for high visibility projects from development to production, and have developed CI/CD pipelines for microservices and QA tests. Additionally, I am certified in various cloud and DevOps technologies.
+
 <!-- 
 Check [my projects page](cover "They are mostly dead projects"). They are mostly dead projects I did for fun, but it also shows some of my skills.
  -->
