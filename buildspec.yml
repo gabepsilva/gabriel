@@ -9,7 +9,7 @@ phases:
   install:
     #run-as: ec2-user
     on-failure: ABORT 
-    commands:
+    #commands:
       - env | sort
       - cat  /etc/passwd
       - pip install mkdocs
@@ -26,7 +26,7 @@ phases:
   #    - command
   build:
     #run-as: Linux-user-name
-    on-failure: ABORT
+    #on-failure: ABORT
     commands:
       - cd mkdocs
       - mkdocs build
