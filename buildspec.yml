@@ -25,7 +25,7 @@ phases:
   #    - command
   #    - command
   build:
-    run-as: Linux-user-name
+    #run-as: Linux-user-name
     on-failure: ABORT
     commands:
       - cd mkdocs
@@ -41,7 +41,7 @@ phases:
   #    - command
   #  finally:
   #    - command
-      - command
+  #    - command
 #reports:
 #  report-group-name-or-arn:
 #    files:
