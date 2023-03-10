@@ -169,8 +169,8 @@ resource "aws_codepipeline" "terraform_pipeline" {
 
       configuration = {
         ConnectionArn    = aws_codestarconnections_connection.github_conn.arn
-        FullRepositoryId = "gabepsilva/gabriel"
-        BranchName       = "aws_migrate"
+        FullRepositoryId = var.full_repository_id
+        BranchName       = var.build_branch
       }
     }
   }
@@ -215,7 +215,7 @@ resource "aws_codepipeline" "terraform_pipeline" {
       configuration = {
         BucketName = aws_s3_bucket.resume_bucket.bucket
         Extract    = true
-        ObjectKey  = "/"
+        #ObjectKey  = ""
       }
     }
   }

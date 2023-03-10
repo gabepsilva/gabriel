@@ -11,13 +11,18 @@ resource "aws_s3_bucket_acl" "logging_bucket_acl" {
   acl    = "private"
 }
 
+##############################
+## SSL CERTIFICATE REQUEST
+##############################
+
+resource "aws_acm_certificate" "gabriel_certificate" {
+  domain_name       = var.fqns
+  validation_method = "DNS"
+}
+
 #####################################
 ## CLOUDFRONT DISTRIBUTION
 #####################################
-#resource "aws_cloudfront_origin_access_identity" "s3_origin_access_identity" {
-#  comment = "CloudFront origin access identity for S3 bucket"
-#}
-
 resource "aws_cloudfront_origin_access_control" "origin_access_control" {
   name                              = aws_s3_bucket.resume_bucket.bucket
   description                       = "Sign but not override"
@@ -27,18 +32,26 @@ resource "aws_cloudfront_origin_access_control" "origin_access_control" {
 }
 
 resource "aws_cloudfront_distribution" "distribution" {
+
   origin {
     domain_name              = aws_s3_bucket.resume_bucket.bucket_regional_domain_name
     origin_id                = aws_s3_bucket.resume_bucket.bucket_regional_domain_name
     origin_access_control_id = aws_cloudfront_origin_access_control.origin_access_control.id
   }
 
+  aliases = ["${var.fqns}"]
 
   enabled             = true
   is_ipv6_enabled     = true
   comment             = "CloudFront distribution for ${aws_s3_bucket.resume_bucket.bucket}"
   default_root_object = "index.html"
-  #price_class         = "PriceClass_100"
+
+  custom_error_response {
+    error_caching_min_ttl = 300
+    error_code            = 403
+    response_code         = 404
+    response_page_path    = "/404.html"
+  }
 
   restrictions {
     geo_restriction {
@@ -63,7 +76,10 @@ resource "aws_cloudfront_distribution" "distribution" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    cloudfront_default_certificate = false
+    acm_certificate_arn            = aws_acm_certificate.gabriel_certificate.arn
+    minimum_protocol_version       = "TLSv1"
+    ssl_support_method             = "sni-only"
   }
 
   logging_config {
@@ -73,4 +89,3 @@ resource "aws_cloudfront_distribution" "distribution" {
   }
 
 }
-
