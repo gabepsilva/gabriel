@@ -51,10 +51,10 @@ phases:
 #    base-directory: location
 #    discard-paths: no | yes
 #    file-format: report-format
-#artifacts:
-#  files:
-#    - location
-#    - location
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'dist'
 #  name: artifact-name
 #  discard-paths: no | yes
 #  base-directory: location
