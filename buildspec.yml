@@ -1,6 +1,6 @@
 version: 0.2
 
-run-as: Linux-user-name
+#run-as: Linux-user-name
 
 env:
   shell: /bin/bash
