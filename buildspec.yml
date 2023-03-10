@@ -10,6 +10,8 @@ phases:
     run-as: ec2-user
     on-failure: ABORT 
     commands:
+      - cat /etc/passwd | cut -d: -f1
+      - env | sort
       - pip install mkdocs
 
   #pre_build:
