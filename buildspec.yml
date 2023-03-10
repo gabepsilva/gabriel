@@ -9,7 +9,10 @@ phases:
   install:
     on-failure: ABORT 
     commands:
+      - id
+      - env | sort
       - pip3 install mkdocs
+      - pip install mkdocs-material
 
 
   #pre_build:
