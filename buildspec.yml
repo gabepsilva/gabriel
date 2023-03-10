@@ -30,7 +30,7 @@ phases:
     commands:
       - cd mkdocs
       - mkdocs build
-      - mkdocs ls -lhrt
+      - ls -lhrt
    # finally:
    #   - command
    #   - command
