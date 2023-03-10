@@ -3,7 +3,7 @@ version: 0.2
 run-as: Linux-user-name
 
 env:
-  shell: /usr/bin/env bash
+  shell: /bin/bash
 
 phases:
   install:
