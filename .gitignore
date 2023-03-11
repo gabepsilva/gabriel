@@ -1,4 +1,6 @@
 mkdocs/site/
 
-terraform/.terraform
-terraform/.terraform*
+.terraform/
+.terraform.lock.hcl
+
+errored.tfstate

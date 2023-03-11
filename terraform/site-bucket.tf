@@ -4,6 +4,7 @@
 
 resource "aws_s3_bucket" "resume_bucket" {
   bucket = var.resume_bucket
+  tags = var.tags
 }
 
 // Ensure private bucket

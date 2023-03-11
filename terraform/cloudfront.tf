@@ -3,6 +3,7 @@
 #########################
 resource "aws_s3_bucket" "logging_bucket" {
   bucket = var.logging_bucket
+  tags = var.tags
 }
 
 // Ensure private bucket
@@ -18,6 +19,7 @@ resource "aws_s3_bucket_acl" "logging_bucket_acl" {
 resource "aws_acm_certificate" "gabriel_certificate" {
   domain_name       = var.fqns
   validation_method = "DNS"
+  tags = var.tags
 }
 
 #####################################
@@ -88,4 +90,5 @@ resource "aws_cloudfront_distribution" "distribution" {
     prefix          = "cloudfront-logs"
   }
 
+  tags = var.tags
 }

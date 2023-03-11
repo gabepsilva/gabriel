@@ -4,6 +4,7 @@
 
 resource "aws_s3_bucket" "codepipeline_artifact_bucket" {
   bucket = var.artifacts_bucket
+  tags   = var.tags
 }
 
 resource "aws_s3_bucket_acl" "codepipeline_bucket_acl" {
@@ -31,6 +32,8 @@ resource "aws_iam_role" "codebuild_role" {
       }
     ]
   })
+
+  tags = var.tags
 }
 
 resource "aws_iam_role_policy_attachment" "codebuild_policy" {
@@ -67,6 +70,8 @@ resource "aws_codebuild_project" "apply_terraform_project" {
   artifacts {
     type = "CODEPIPELINE"
   }
+
+  tags = var.tags
 }
 
 
@@ -77,6 +82,7 @@ resource "aws_codebuild_project" "apply_terraform_project" {
 resource "aws_codestarconnections_connection" "github_conn" {
   name          = "GitHub-Connection"
   provider_type = "GitHub"
+  tags          = var.tags
 }
 
 resource "aws_iam_role_policy" "codepipeline_policy" {
@@ -128,6 +134,7 @@ data "aws_iam_policy_document" "codepipeline_policy" {
 resource "aws_iam_role" "codepipeline_role" {
   name               = "terraform_codepipeline_role"
   assume_role_policy = data.aws_iam_policy_document.assume_role.json
+  tags               = var.tags
 }
 
 data "aws_iam_policy_document" "assume_role" {
@@ -220,4 +227,5 @@ resource "aws_codepipeline" "terraform_pipeline" {
     }
   }
 
+  tags = var.tags
 }

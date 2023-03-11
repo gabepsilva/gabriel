@@ -37,3 +37,13 @@ variable "fqns" {
   description = "CloudFront alternate domain"
   type        = string
 }
+
+
+#####################
+# Tags
+#####################
+variable "tags" {
+  description = "Tag resources of this project"
+  type = map(string)
+
+}
