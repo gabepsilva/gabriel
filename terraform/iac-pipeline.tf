@@ -165,6 +165,7 @@ resource "aws_codepipeline" "terraform_pipeline" {
   stage {
     name = "Source"
 
+
     action {
       name             = "SourceAction"
       category         = "Source"
@@ -174,10 +175,13 @@ resource "aws_codepipeline" "terraform_pipeline" {
       output_artifacts = ["SourceOutput"]
 
 
+
       configuration = {
         ConnectionArn    = aws_codestarconnections_connection.github_conn.arn
         FullRepositoryId = var.full_repository_id
         BranchName       = var.build_branch
+        CloneDepth       = 0
+
       }
     }
   }

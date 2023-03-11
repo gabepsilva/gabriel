@@ -14,6 +14,9 @@ phases:
       - pip3 install mkdocs-minify-plugin
       - pip3 install mkdocs-git-revision-date-localized-plugin
       - env | sort
+      - pwd
+      - ls -lhtra
+      - git rev-parse --short HEAD
   #pre_build:
   #  run-as: Linux-user-name
   #  on-failure: ABORT | CONTINUE
