@@ -13,6 +13,7 @@ phases:
       - pip3 install mkdocs-material
       - pip3 install mkdocs-minify-plugin
       - pip3 install mkdocs-git-revision-date-localized-plugin
+      - apt install -y git
   #pre_build:
   #  run-as: Linux-user-name
   #  on-failure: ABORT | CONTINUE
