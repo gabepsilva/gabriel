@@ -1,12 +1,12 @@
 
 
 # Résumé: Gabriel P da Silva 
-<img src="./images/index.png" align="left" width="100px"/>
+<img src="/images/index.png" align="left" width="100px"/>
 
 
 :material-city-variant: Toronto, ON, Canada  
-:simple-linkedin:{ .linkedin } linkedin.com/in/gabrielpe  
-:simple-github: github.com/gabepsilva  
+:simple-linkedin:{ .linkedin } [linkedin.com/in/gabrielpe](https://linkedin.com/in/gabrielpe ""){:target="_blank"}   
+:simple-github: [github.com/gabepsilva](https://github.com/gabepsilva ""){:target="_blank"}
 
 <br clear="left"/>
 
@@ -124,11 +124,12 @@ These are the skills I use more frequently, but also as part of my self improvem
 
 
 ## Education
-Information Systems - [OPET University of Technology](https://www.opet.com.br/uniopet/conheca "go to the university website") - 2006 - Curitiba - Brazil  
-Project Management (diploma) - [ISAE/FGV](https://isaebrasil.com.br/ "go to the institution  website") - 2013 - Curitiba - Brazil  
+Information Systems - [OPET University of Technology](https://www.opet.com.br/uniopet/conheca "go to the university website"){:target="_blank"} - 2006 - Curitiba - Brazil  
+Project Management (diploma) - [ISAE/FGV](https://isaebrasil.com.br/ "go to the institution  website"){:target="_blank"} - 2013 - Curitiba - Brazil  
 
+<!--
 Plus [a bunch of courses](cover "some are not that relevant, but are very cool").
-
+-->
  
 ## Languages
 🇧🇷 **Portuguese**: Native  

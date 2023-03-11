@@ -10,7 +10,9 @@ phases:
     on-failure: ABORT 
     commands:
       - pip3 install mkdocs
-      - pip install mkdocs-material
+      - pip3 install mkdocs-material
+      - pip3 install mkdocs-minify-plugin
+      - pip3 install mkdocs-git-revision-date-localized-plugin
   #pre_build:
   #  run-as: Linux-user-name
   #  on-failure: ABORT | CONTINUE

@@ -4,6 +4,10 @@ site_author: Gabriel P. Silva
 site_description: >-
   Gabriel's resume. The DevOps engineer
 
+  # Repository
+repo_name: gabepsilva/gabriel
+repo_url: https://github.com/gabepsilva/gabriel
+
 # Copyright
 copyright: Copyright &copy; 2016 - 2023 Gabriel da Silva
 
@@ -17,10 +21,16 @@ nav:
 extra:
   analytics:
     provider: google
-    property: G-32G1TZW0ME
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/squidfunk
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/gabrielpe
 
 theme:
   name: material
+  custom_dir: overrides
   features:
     - content.code.copy
     - navigation.top
@@ -83,5 +93,6 @@ markdown_extensions:
 plugins:
   - search:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-#  - minify:
-#      minify_html: true
+  - minify:
+      minify_html: true
+  - git-revision-date-localized
