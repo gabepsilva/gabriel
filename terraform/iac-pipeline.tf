@@ -45,8 +45,8 @@ resource "aws_iam_role_policy_attachment" "codebuild_policy" {
 ## CODE BUILD PROJECT
 #########################
 resource "aws_codebuild_project" "apply_terraform_project" {
-  name          = "apply-terraform"
-  description   = "Apply Terraform scripts"
+  name          = "resume_build_deploy"
+  description   = "Build and deploy resume"
   build_timeout = "60"
   service_role  = aws_iam_role.codebuild_role.arn
 
@@ -154,7 +154,7 @@ data "aws_iam_policy_document" "assume_role" {
 ## PIPELINE
 #########################
 resource "aws_codepipeline" "terraform_pipeline" {
-  name     = "terraform_pipeline"
+  name     = "resume_build_deploy_pipeline"
   role_arn = aws_iam_role.codepipeline_role.arn
 
   artifact_store {
@@ -196,7 +196,7 @@ resource "aws_codepipeline" "terraform_pipeline" {
       run_order        = "1"
 
       configuration = {
-        ProjectName = "apply-terraform"
+        ProjectName = aws_codebuild_project.apply_terraform_project.name
 
         EnvironmentVariables = jsonencode([
           {

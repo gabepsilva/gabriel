@@ -30,7 +30,7 @@ extra:
 
 theme:
   name: material
-  custom_dir: docs/overrides
+  custom_dir: overrides
   features:
     - content.code.copy
     - navigation.top
