@@ -38,7 +38,7 @@ fi
 
 # Export draw.io diagram to SVG
 echo "Exporting draw.io diagram..."
-./"${APPIMAGE_NAME}" --export --format svg --uncompressed "${INPUT_DIAGRAM}"
+./"${APPIMAGE_NAME} --no-sandbox --export --format svg --uncompressed ${INPUT_DIAGRAM}"
 
 # Move exported SVG to the correct location
 echo "Moving exported SVG..."
