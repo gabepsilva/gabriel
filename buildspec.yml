@@ -56,7 +56,8 @@ artifacts:
   files:
     - '**/*'
   base-directory: 'mkdocs/site'
-  name: mega_resume-${BUILD_DATE_TIME}-${GIT_SHORT_HASH}
+  name: mega_resume-1
+  #name: mega_resume-${BUILD_DATE_TIME}-${GIT_SHORT_HASH}
 #  discard-paths: no | yes
 #  base-directory: location
 #  exclude-paths: excluded paths
