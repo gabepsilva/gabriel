@@ -13,8 +13,8 @@ The initial objective of this project was to develop a simple personal website t
 However, soon enought I noticed I needed some extra features  like authentication and a custom domain ... and again, this project turned to be a much larger job:
 
 **Current archtecture:**  
-<a href="../images/resume-flow-diagram.svg" target="_blank" style="display:inline-block; width:800px; height:200px; overflow:hidden; position:relative;">
-    <img src="../images/resume-flow-diagram.svg" alt="Current archtecture diagram" title="Current archtecture" style="position:absolute; top:-190%; left:-50%; transform:translate(50%, 10%);">
+<a href="images/resume-flow-diagram.svg" target="_blank" style="display:inline-block; width:800px; height:200px; overflow:hidden; position:relative;">
+    <img src="images/resume-flow-diagram.svg" alt="Current archtecture diagram" title="Current archtecture" style="position:absolute; top:-190%; left:-50%; transform:translate(50%, 10%);">
 </a>
 
 

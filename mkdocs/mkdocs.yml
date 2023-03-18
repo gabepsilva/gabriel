@@ -14,7 +14,7 @@ copyright: Copyright &copy; 2016 - 2023 Gabriel da Silva
 nav:
   - Home: index.md
   - <strong>Projects</strong>: /
-  - Mega Resume: projects/mega-resume/resume.md
+  - Mega Resume: projects/mega-resume/index.md
   
 
 extra:
