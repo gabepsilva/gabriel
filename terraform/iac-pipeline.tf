@@ -180,8 +180,7 @@ resource "aws_codepipeline" "terraform_pipeline" {
         ConnectionArn    = aws_codestarconnections_connection.github_conn.arn
         FullRepositoryId = var.full_repository_id
         BranchName       = var.build_branch
-        CloneDepth       = 0
-
+        OutputArtifactFormat: "CODEBUILD_CLONE_REF"
       }
     }
   }

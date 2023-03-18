@@ -1,14 +1,13 @@
 
 
 # Résumé: Gabriel P da Silva 
-<img src="/images/index.png" align="left" width="100px"/>
-
+![Gabriel photo](/images/index.png){ width="125", align=left } 
 
 :material-city-variant: Toronto, ON, Canada  
 :simple-linkedin:{ .linkedin } [linkedin.com/in/gabrielpe](https://linkedin.com/in/gabrielpe ""){:target="_blank"}   
 :simple-github: [github.com/gabepsilva](https://github.com/gabepsilva ""){:target="_blank"}
 
-<br clear="left"/>
+<br>  
 
 I am an experienced DevOps Architect with proficiency with cloud computing platforms such as AWS and GCP, containerization tools like Docker and Kubernetes, version control strategies, build tools like Gradle, Maven and Make, and infrastructure-as-code tools like Terraform and Ansible. I have a comprehensive experience supporting companies to adopt the Culture, Processes, and Tools of Devops.
 

@@ -13,9 +13,8 @@ copyright: Copyright &copy; 2016 - 2023 Gabriel da Silva
 
 nav:
   - Home: index.md
-  #- Courses: courses.md
-  #- Youtubers: youtubers.md
-  #- Projects: projects.md
+  - <strong>Projects</strong>: /
+  - Mega Resume: projects/mega-resume/resume.md
   
 
 extra:

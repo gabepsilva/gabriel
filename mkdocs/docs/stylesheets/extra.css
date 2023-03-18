@@ -10,3 +10,7 @@
 .exin {
   color: #002a5a;
 }
+
+.md-main__inner {
+min-width: 90%;
+}
