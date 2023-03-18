@@ -14,7 +14,7 @@ phases:
       - pip3 install mkdocs-minify-plugin
       - pip3 install mkdocs-git-revision-date-localized-plugin
       - apt update
-      - apt install -y libfuse2 libatk1.0-0 libatk-bridge2.0-0 libcups2 libgtk-3-0 libnss3 libxss1 libasound2 libdbus-glib-1-2 libgconf-2-4 libnotify4
+      - apt install -y libfuse2 libatk1.0-0 libatk-bridge2.0-0 libcups2 libgtk-3-0 libnss3 libxss1 libasound2 libdbus-glib-1-2 libgconf-2-4 libnotify4 libgbm1
   #pre_build:
   #  run-as: Linux-user-name
   #  on-failure: ABORT | CONTINUE
