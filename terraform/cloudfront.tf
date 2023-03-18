@@ -3,7 +3,7 @@
 #########################
 resource "aws_s3_bucket" "logging_bucket" {
   bucket = var.logging_bucket
-  tags = var.tags
+  tags   = var.tags
 }
 
 // Ensure private bucket
@@ -19,8 +19,20 @@ resource "aws_s3_bucket_acl" "logging_bucket_acl" {
 resource "aws_acm_certificate" "gabriel_certificate" {
   domain_name       = var.fqns
   validation_method = "DNS"
-  tags = var.tags
+  tags              = var.tags
 }
+
+##############################
+## Cloudfront function
+##############################
+resource "aws_cloudfront_function" "index_html_redir" {
+  name    = "index_html_redir"
+  runtime = "cloudfront-js-1.0"
+  comment = "redirects requests to subfolders with implicity index.html"
+  publish = true
+  code    = file("${path.module}/resources/index_html_redir.js")
+}
+
 
 #####################################
 ## CLOUDFRONT DISTRIBUTION
@@ -65,22 +77,30 @@ resource "aws_cloudfront_distribution" "distribution" {
     allowed_methods  = ["GET", "HEAD"]
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = aws_s3_bucket.resume_bucket.bucket_regional_domain_name
+
     forwarded_values {
       query_string = false
       cookies {
         forward = "none"
       }
     }
+
     viewer_protocol_policy = "redirect-to-https"
     min_ttl                = 0
     default_ttl            = 86400
     max_ttl                = 31536000
+
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.index_html_redir.arn
+    }
+    
   }
 
   viewer_certificate {
     cloudfront_default_certificate = false
     acm_certificate_arn            = aws_acm_certificate.gabriel_certificate.arn
-    minimum_protocol_version       = "TLSv1"
+    minimum_protocol_version       = "TLSv1.2_2019"
     ssl_support_method             = "sni-only"
   }
 

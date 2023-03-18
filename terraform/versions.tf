@@ -4,6 +4,7 @@ terraform {
   backend "s3" {
     bucket = "gabriel-resume-state-file"
     key    = "terraform.tfstate"
+    region = "us-east-1"
   }
 }
 
