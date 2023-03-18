@@ -30,6 +30,7 @@ phases:
     #run-as: Linux-user-name
     #on-failure: ABORT
     commands:
+      - bash drawio-export.sh
       - cd mkdocs
       - mkdocs build
    # finally:

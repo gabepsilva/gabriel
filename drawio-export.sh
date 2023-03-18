@@ -1,31 +1,5 @@
 #!/bin/bash
 #
-# This script will render all draw.io diaghrams and
-# move them to the correct path so the images are updated
-# when commiting to git of deploying the application
-
-
-
-
-# Donwload draw.io desktop for linux
-# https://github.com/jgraph/drawio-desktop/releases/download/v20.8.16/drawio-x86_64-20.8.16.AppImage
-
-
-if [ ! -f draw.io.AppImage ]; then
-    curl -L -o draw.io.AppImage https://github.com/jgraph/drawio-desktop/releases/download/v20.8.16/drawio-x86_64-20.8.16.AppImage
-    chmod +x draw.io.AppImage
-fi
-
-MEGA_RESUME_PATH='mkdocs/docs/projects/mega-resume'
-
-./draw.io.AppImage --export --format svg --uncompressed ${MEGA_RESUME_PATH}/docs/resume-flow-diagram.drawio
-
-mv ${MEGA_RESUME_PATH}/docs/resume-flow-diagram.svg ${MEGA_RESUME_PATH}/images/resume-flow-diagram.svg
-
-
-
-#!/bin/bash
-#
 # drawio-export.sh
 #
 # This script exports draw.io diagrams to SVG format and moves them to the
