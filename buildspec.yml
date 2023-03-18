@@ -55,8 +55,8 @@ phases:
 #    file-format: report-format
 artifacts:
   files:
-    - '**/*'
-  base-directory: 'mkdocs/site'
+    - 'mega_resume-1.zip'
+  #base-directory: 'mkdocs/site'
   name: mega_resume-1.zip
   #name: mega_resume-${BUILD_DATE_TIME}-${GIT_SHORT_HASH}
 #  discard-paths: no | yes
