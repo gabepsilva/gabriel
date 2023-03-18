@@ -13,10 +13,8 @@ phases:
       - pip3 install mkdocs-material
       - pip3 install mkdocs-minify-plugin
       - pip3 install mkdocs-git-revision-date-localized-plugin
-      - env | sort
-      - pwd
-      - ls -lhtra
-      - git rev-parse --short HEAD
+      - apt update
+      - apt install libfuse2
   #pre_build:
   #  run-as: Linux-user-name
   #  on-failure: ABORT | CONTINUE
@@ -36,12 +34,15 @@ phases:
    # finally:
    #   - command
    #   - command
-  #post_build:
+  post_build:
   #  run-as: Linux-user-name
   #  on-failure: ABORT | CONTINUE
-  #  commands:
-  #    - command
-  #    - command
+    commands:
+      - export BUILD_DATE_TIME=$(date +'%Y_%m_%d-%H_%M')
+      - export GIT_SHORT_HASH=$(git rev-parse --short HEAD)
+      - pwd
+      - ls -lhtra
+      - env | sort
   #  finally:
   #    - command
   #    - command
@@ -57,7 +58,7 @@ artifacts:
   files:
     - '**/*'
   base-directory: 'mkdocs/site'
-#  name: artifact-name
+  name: mega_resume-${BUILD_DATE_TIME}-${GIT_SHORT_HASH}
 #  discard-paths: no | yes
 #  base-directory: location
 #  exclude-paths: excluded paths
