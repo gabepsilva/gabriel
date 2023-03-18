@@ -28,7 +28,6 @@ phases:
     commands:
       - cd mkdocs
       - mkdocs build
-      - cd ..
    # finally:
    #   - command
    #   - command
@@ -38,7 +37,6 @@ phases:
     commands:
       - export BUILD_DATE_TIME=$(date +'%Y_%m_%d-%H_%M')
       - export GIT_SHORT_HASH=$(git rev-parse --short HEAD)
-      - zip -r mega_resume-1.zip mkdocs/site/*
       - pwd
       - ls -lhtra
       - env | sort
@@ -55,10 +53,9 @@ phases:
 #    file-format: report-format
 artifacts:
   files:
-    - 'mega_resume-1.zip'
-  #base-directory: 'mkdocs/site'
-  #name: mega_resume-1.zip
-  #name: mega_resume-${BUILD_DATE_TIME}-${GIT_SHORT_HASH}
+    - '**/*'
+  base-directory: 'mkdocs/site'
+  name: mega_resume-${BUILD_DATE_TIME}-${GIT_SHORT_HASH}
 #  discard-paths: no | yes
 #  base-directory: location
 #  exclude-paths: excluded paths
